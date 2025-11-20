@@ -17,13 +17,16 @@ dependencies = [
     "pillow",
     "huggingface_hub",
     "numpy",
-    "torch>=2.0.0",
+    "torch",
     "torchvision",
     "gradio",
     "utils3d @ git+https://github.com/EasternJournalist/utils3d.git@3fab839f0be9931dac7c8488eb0e1600c236e183",
     "pipeline @ git+https://github.com/EasternJournalist/pipeline.git@866f059d2a05cde05e4a52211ec5051fd5f276d6"
 ]
 requires-python = ">=3.9"
+
+[tool.uv]
+no-build-isolation = ["torch", "torchvision"]
 
 [project.urls]
 Homepage = "https://github.com/microsoft/MoGe"
